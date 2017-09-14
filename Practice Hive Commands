@@ -1,0 +1,22 @@
+
+ creating the table in the Hive wich is top the hadoopp system. Default location hadooo
+ default location "/user/hive/warehouse
+ Internal Table. 
+Create table emp (empid int, empname string, empsal float)
+row format delimited
+fields terminated by '\t';
+  External Table withought location 
+  
+  Create  external table emp (empid int, empname string, empsal float)
+row format delimited
+fields terminated by '\t';
+ 
+   External Table with location
+   EXTERNAL TABLE WITH LOCATION:
+#If we create external table with location the table name will not be create as a directory but schema will be store in meta store.Before executing #the query need to create goods, things and articles directories in HDFS.
+create external table item (itemid int, itemname string, item price int)
+row format delimited
+fields terminated by '\t'
+location '/goods/things/articles';
+
+ 
