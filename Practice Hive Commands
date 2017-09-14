@@ -19,4 +19,18 @@ row format delimited
 fields terminated by '\t'
 location '/goods/things/articles';
 
+ Now we can load the data into it. below is command check it out 
+ 
+ 
+ 
+ #ROM LOCAL FILE SYSTEM:
+#Hive> load data local inpath <filepath> into table <table-name>
+load data local inpath '/home/cloudera/student info' into table studentinfo;
+
+#FROM HDFS SYSTEM:
+#Hive>load data inpath <filepath> into table <table-name>
+desc student;
+#Stu-id | stu-name | stu-marks
+
+ 
  
