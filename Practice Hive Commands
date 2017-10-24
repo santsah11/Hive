@@ -23,7 +23,7 @@ location '/goods/things/articles';
  
  
  
- #ROM LOCAL FILE SYSTEM:
+ #ROM LOCAL FILE SYSTEM: this means we are loading the file form linux to Hive table that is already existed in the Hive
 #Hive> load data local inpath <filepath> into table <table-name>
 load data local inpath '/home/cloudera/student info' into table studentinfo;
 
