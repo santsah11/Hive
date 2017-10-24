@@ -1,4 +1,11 @@
 
+#FROM HDFS SYSTEM:
+
+#Hive>load data inpath <filepath> into table <table-name>
+
+desc student;
+
+#Stu-id | stu-name | stu-marks
  creating the table in the Hive wich is top the hadoopp system. Default location hadooo
  default location "/user/hive/warehouse
  Internal Table. 
@@ -23,12 +30,12 @@ location '/goods/things/articles';
  
  
  
- #ROM LOCAL FILE SYSTEM: this means we are loading the file form linux to Hive table that is already existed in the Hive
+ #ROM LOCAL FILE SYSTEM:  this means we are loading the file form linux to Hive table that is already existed in the Hive
 #Hive> load data local inpath <filepath> into table <table-name>
 load data local inpath '/home/cloudera/student info' into table studentinfo;
 
-#FROM HDFS SYSTEM:
-#Hive>load data inpath <filepath> into table <table-name>
+#FROM HDFS SYSTEM: if  we want to override the data into Hive table use the override key word before the into table
+#Hive>load data inpath <filepath>  OVERRITE into table <table-name>
 desc student;
 #Stu-id | stu-name | stu-marks
 
